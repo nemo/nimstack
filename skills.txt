@@ -1,0 +1,13 @@
+# Upstream skills nimstack installs from their original repos.
+# Format: <source> <skill> [<skill> ...] [--rename <new-name>]
+# --rename only works with a single skill on the line.
+# Skills in ./skills/ (nimstack's own) are installed separately and don't belong here.
+
+https://github.com/cursor/plugins/tree/main/pstack  architect how why blast-radius correct bro ketchup ketchup-video unslop statechart principle-separate-before-serializing-shared-state create-verification-skill maintain-verification-skill create-formal-verification-skill maintain-formal-verification-skill
+
+mattpocock/skills  implement tdd codebase-design domain-modeling grill-me grilling wayfinder
+# Renamed so it doesn't clash with Claude Code's built-in /code-review.
+mattpocock/skills  code-review --rename matt-code-review
+
+grp06/goalcraft     goalcraft
+vercel-labs/skills  find-skills
