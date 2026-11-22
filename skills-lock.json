@@ -11,7 +11,7 @@
     },
     "arena": {
       "source": "nemo/nimstack",
-      "commit": "ed1ff5921f63a0c0b61d8336097a5821f8865c15",
+      "commit": "6cd45ea400828b12cc7447d5b392405e46f36d3d",
       "sourceType": "github",
       "skillPath": "skills/arena/SKILL.md",
       "computedHash": "096f2cf549e2f67565c4b87b3400587bc6ba411a7f54cc1913b028885e3bf6cd"
@@ -31,6 +31,13 @@
       "sourceType": "github",
       "skillPath": "pstack/skills/bro/SKILL.md",
       "computedHash": "f20a76d629ff552e85205507bcab051cc33667943f2c5bb5879b0475f26c7429"
+    },
+    "clean-up-worktree": {
+      "source": "nemo/nimstack",
+      "commit": "6cd45ea400828b12cc7447d5b392405e46f36d3d",
+      "sourceType": "github",
+      "skillPath": "skills/clean-up-worktree/SKILL.md",
+      "computedHash": "a95ccaab8bef9d7c98f536fb05f45f12655e7bae8c7010ace3b3c48d818b428b"
     },
     "codebase-design": {
       "source": "mattpocock/skills",
@@ -163,7 +170,7 @@
     },
     "pstack-claude-code": {
       "source": "nemo/nimstack",
-      "commit": "ed1ff5921f63a0c0b61d8336097a5821f8865c15",
+      "commit": "6cd45ea400828b12cc7447d5b392405e46f36d3d",
       "sourceType": "github",
       "skillPath": "skills/pstack-claude-code/SKILL.md",
       "computedHash": "e69dc9985eaafe652e03034b3e4bb09edb02680d71b6950a7bbf701e20036305"
