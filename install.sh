@@ -55,4 +55,20 @@ while IFS= read -r line; do
   run add "$source" ${SCOPE[@]+"${SCOPE[@]}"} -y -a "${AGENTS[@]}" ${extra[@]+"${extra[@]}"} -s "${skills[@]}"
 done <<< "$manifest"
 
+# 3. When an agent's folder is itself a symlink (e.g. ~/.claude -> ~/dotfiles/.claude),
+# the CLI's relative links (../../.agents/skills/x) resolve from the real folder and
+# break. Repoint any broken link into ~/.agents/skills with an absolute path.
+if [[ $DRY -eq 0 && ${#SCOPE[@]} -gt 0 ]]; then
+  for dir in "$HOME"/.*/skills; do
+    for link in "$dir"/*; do
+      [[ -L "$link" && ! -e "$link" ]] || continue
+      target="$(readlink "$link")"
+      [[ "$target" == *.agents/skills/* ]] || continue
+      name="${target##*/}"
+      [[ -d "$HOME/.agents/skills/$name" ]] || continue
+      ln -sfn "$HOME/.agents/skills/$name" "$link" && echo "relinked $link"
+    done
+  done
+fi
+
 echo "nimstack installed."
